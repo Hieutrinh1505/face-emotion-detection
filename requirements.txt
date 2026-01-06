@@ -1,0 +1,13 @@
+fastapi[standard]
+uvicorn
+numpy
+torch
+torchvision
+streamlit
+streamlit-webrtc
+facenet-pytorch
+opencv-python-headless
+efficientnet-pytorch
+pillow
+pandas
+requests
