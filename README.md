@@ -1,5 +1,7 @@
 # Real-time Face Emotion Detection
 
+![Demo](REC-20260105190206.mp4)
+
 A real-time facial emotion detection application using deep learning. The system detects faces in video streams and classifies emotions into 7 categories: Angry, Disgust, Fear, Happy, Neutral, Sad, and Surprise.
 
 ## Quick Start with Docker
@@ -65,14 +67,14 @@ EfficientNet-B0 (pretrained) → FC(1280→512) → ReLU → Dropout(0.4) → FC
 
 ## Tech Stack
 
-| Component | Technology |
-|-----------|------------|
-| Frontend | Streamlit + streamlit-webrtc |
-| Backend | FastAPI + Uvicorn |
-| Face Detection | MTCNN (facenet-pytorch) |
-| Emotion Model | EfficientNet-B0 (PyTorch) |
-| Data Processing | OpenCV, PIL, NumPy |
-| Containerization | Docker |
+| Component        | Technology                   |
+| ---------------- | ---------------------------- |
+| Frontend         | Streamlit + streamlit-webrtc |
+| Backend          | FastAPI + Uvicorn            |
+| Face Detection   | MTCNN (facenet-pytorch)      |
+| Emotion Model    | EfficientNet-B0 (PyTorch)    |
+| Data Processing  | OpenCV, PIL, NumPy           |
+| Containerization | Docker                       |
 
 ## Project Structure
 
@@ -99,10 +101,12 @@ face-emotion-detection/
 Perform face detection or emotion classification.
 
 **Parameters:**
+
 - `file`: Image file (JPEG, PNG)
 - `model_type`: `"face"` or `"emotion"`
 
 **Response (face):**
+
 ```json
 {
   "boxes": [[x1, y1, x2, y2], ...]
@@ -110,6 +114,7 @@ Perform face detection or emotion classification.
 ```
 
 **Response (emotion):**
+
 ```json
 {
   "probabilities": {
@@ -117,7 +122,7 @@ Perform face detection or emotion classification.
     "disgust": 0.02,
     "fear": 0.03,
     "happy": 0.75,
-    "neutral": 0.10,
+    "neutral": 0.1,
     "sad": 0.03,
     "surprise": 0.02
   }
@@ -132,6 +137,7 @@ Download the FER2013 dataset from Kaggle:
 https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset
 
 Extract to `images/` folder:
+
 ```
 images/
 ├── train/
@@ -149,6 +155,7 @@ images/
 ### 2. Configure Training Parameters
 
 Copy and edit the environment file:
+
 ```bash
 cp .env.example .env
 ```
