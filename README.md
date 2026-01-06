@@ -1,6 +1,6 @@
 # Real-time Face Emotion Detection
 
-https://github.com/user-attachments/assets/REC-20260105190206.mp4
+https://github.com/Hieutrinh1505/face-emotion-detection/blob/main/REC-20260105190206.mp4
 
 A real-time facial emotion detection application using deep learning. The system detects faces in video streams and classifies emotions into 7 categories: Angry, Disgust, Fear, Happy, Neutral, Sad, and Surprise.
 
